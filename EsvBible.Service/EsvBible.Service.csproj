@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{134072A1-10D9-439F-979D-18E56C36F9B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EsvBible.Service</RootNamespace>
+    <AssemblyName>EsvBible.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Nalarium">
+      <HintPath>..\packages\Nalarium.3.0.1\lib\net35\Nalarium.dll</HintPath>
+    </Reference>
+    <Reference Include="Nalarium.Data.Common">
+      <HintPath>..\packages\Nalarium.3.0.1\lib\net35\Nalarium.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Nalarium.ServiceModel">
+      <HintPath>..\packages\Nalarium.3.0.1\lib\net35\Nalarium.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArgumentListManager.cs" />
+    <Compile Include="EsvBibleServiceConfiguration.cs" />
+    <Compile Include="EsvBibleServiceV2.cs" />
+    <Compile Include="Parameter\DailyVerseParameter.cs" />
+    <Compile Include="Parameter\Parameter.cs" />
+    <Compile Include="Parameter\PassageQueryParameter.cs" />
+    <Compile Include="Parameter\QueryInfoParameter.cs" />
+    <Compile Include="Parameter\QueryParameter.cs" />
+    <Compile Include="Parameter\ReadingPlanInfoParameter.cs" />
+    <Compile Include="Parameter\ReadingPlanQueryParameter.cs" />
+    <Compile Include="Parameter\VerseParameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting\CrosswayXmlVersion10Setting.cs" />
+    <Compile Include="Setting\HtmlOutputSetting.cs" />
+    <Compile Include="Setting\IOutputSetting.cs" />
+    <Compile Include="Setting\PlainTextSetting.cs" />
+    <Compile Include="TextTranslation.cs" />
+    <Compile Include="OutputFormat.cs" />
+    <Compile Include="QueryType.cs" />
+    <Compile Include="ReadingPlan.cs" />
+    <Compile Include="EsvBibleException.cs" />
+    <Compile Include="IDefaultOptimization.cs" />
+    <Compile Include="RestEndpoint.cs" />
+    <Compile Include="RestServiceCaller.cs" />
+    <Compile Include="QueryInfoData.cs" />
+    <Compile Include="Warning.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
