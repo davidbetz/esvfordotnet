@@ -1,12 +1,10 @@
-﻿Esv Bible Services
+# ESV Bible Services for .NET
 
-(November 2007)
+Copyright (c) 2007 David Betz
 
-Developer: David Betz <dfb davidbetz net>
+See [https://netfxharmonics.com/2007/11/esv-bible-web-service-client-for-net-35](https://netfxharmonics.com/2007/11/esv-bible-web-service-client-for-net-35) for fuller details.
 
-See [https://netfxharmonics.com/2007/11/esv-bible-web-service-client-for-net-35](https://netfxharmonics.com/2007/11/esv-bible-web-service-client-for-net-35)
-
-=============================================================================================
+## Usage
 
 Here's a simple passage query returning HTML data:
 
