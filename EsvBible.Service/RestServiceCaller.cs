@@ -26,7 +26,7 @@ namespace EsvBible.Service
         {
             ArgumentListManager.ApplyArguments(ArgumentList, settings);
             String argumentList = ArgumentListManager.GetArgumentString(ArgumentList);
-            return HttpAbstractor.GetWebText(GetAbsoluteUri(endpoint, argumentList), settings.Timeout);
+            return HttpAbstractor.Get(GetAbsoluteUri(endpoint, argumentList), settings.Timeout);
         }
 
         private Uri GetAbsoluteUri(String endpoint, String argumentList)
