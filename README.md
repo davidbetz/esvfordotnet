@@ -3,6 +3,7 @@
 Copyright (c) 2007 David Betz
 
 [![Build Status](https://travis-ci.org/davidbetz/esvfordotnet.svg?branch=master)](https://travis-ci.org/davidbetz/esvfordotnet)
+[![NuGet Version and Downloads count](https://buildstats.info/nuget/EsvBible.Service)](https://www.nuget.org/packages/EsvBible.Service)
 
 See [https://netfxharmonics.com/2007/11/esv-bible-web-service-client-for-net-35](https://netfxharmonics.com/2007/11/esv-bible-web-service-client-for-net-35) for fuller details.
 
