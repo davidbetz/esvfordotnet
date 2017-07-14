@@ -4,7 +4,7 @@ using System.Xml;
 using EsvBible.Service;
 using EsvBible.Service.Parameter;
 using EsvBible.Service.Setting;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ESVBible.Test
 {
@@ -13,10 +13,10 @@ namespace ESVBible.Test
     ///     For more information, see:
     ///     http://www.netfxharmonics.com/2007/11/Esv-Bible-Web-Service-20-Framework-for-NET-35
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class EsvBible : TestBase
     {
-        [TestMethod]
+        [Test]
         public void SimplePassageQueryTest()
         {
             var service = new EsvBibleServiceV2();
@@ -24,7 +24,7 @@ namespace ESVBible.Test
             Assert.IsFalse(String.IsNullOrEmpty(output));
         }
 
-        [TestMethod]
+        [Test]
         public void SimplePassageQueryPlainTextTest()
         {
             var service = new EsvBibleServiceV2(OutputFormat.PlainText);
@@ -32,7 +32,7 @@ namespace ESVBible.Test
             Assert.IsFalse(String.IsNullOrEmpty(output));
         }
 
-        [TestMethod]
+        [Test]
         public void SimplePassageQueryWithParametersTest()
         {
             var pqp = new PassageQueryParameter { Passage = "John 14:6" };
@@ -45,7 +45,7 @@ namespace ESVBible.Test
             Assert.IsFalse(String.IsNullOrEmpty(output));
         }
 
-        [TestMethod]
+        [Test]
         public void DailyVerseTest()
         {
             var service = new EsvBibleServiceV2(new HtmlOutputSetting
@@ -56,7 +56,7 @@ namespace ESVBible.Test
             Assert.IsFalse(String.IsNullOrEmpty(output));
         }
 
-        [TestMethod]
+        [Test]
         public void ReadingPlanTest()
         {
             var service = new EsvBibleServiceV2();
@@ -67,7 +67,7 @@ namespace ESVBible.Test
             Assert.IsFalse(String.IsNullOrEmpty(output));
         }
 
-        [TestMethod]
+        [Test]
         public void SearchTest()
         {
             var service = new EsvBibleServiceV2();
@@ -75,7 +75,7 @@ namespace ESVBible.Test
             Assert.IsFalse(String.IsNullOrEmpty(output));
         }
 
-        [TestMethod]
+        [Test]
         public void QueryInfoAsObjectTest()
         {
             var service = new EsvBibleServiceV2();
@@ -102,7 +102,7 @@ namespace ESVBible.Test
             }
         }
 
-        [TestMethod]
+        [Test]
         public void CrossWayXmlTest()
         {
             var service = new EsvBibleServiceV2(new CrosswayXmlVersion10Setting
@@ -118,7 +118,7 @@ namespace ESVBible.Test
             Assert.IsFalse(String.IsNullOrEmpty(output));
         }
 
-        [TestMethod]
+        [Test]
         public void PassageQueryAsXmlDocumentTest()
         {
             var service = new EsvBibleServiceV2();
@@ -126,7 +126,7 @@ namespace ESVBible.Test
             Assert.IsFalse(String.IsNullOrEmpty(output.InnerXml));
         }
 
-        [TestMethod]
+        [Test]
         public void PassageQueryValueViaXPathTest()
         {
             var service = new EsvBibleServiceV2();
@@ -138,7 +138,7 @@ namespace ESVBible.Test
             Assert.IsFalse(String.IsNullOrEmpty(output));
         }
 
-        [TestMethod]
+        [Test]
         public void PassageQueryValueViaXPathMultiTest()
         {
             var service = new EsvBibleServiceV2();
