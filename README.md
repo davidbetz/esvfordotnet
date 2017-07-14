@@ -9,6 +9,8 @@ See [https://netfxharmonics.com/2007/11/esv-bible-web-service-client-for-net-35]
 
 ## Usage
 
+(rather old project, so the syntax may look weird)
+
 Here's a simple passage query returning HTML data:
 
     var service = new EsvBibleServiceV2( );
